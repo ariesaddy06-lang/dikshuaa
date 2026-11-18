@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffd7e8">
+<meta name="description" content="A tiny pink fairytale made especially for Dikshuaaa. Happy Princess Day!">
+<title>For Dikshuaaa ♡ Princess Day</title>
+<style>
+:root{--pink:#ff78ad;--deep:#d94c87;--pale:#fff1f7;--ink:#71334f;--gold:#d8a64d}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:linear-gradient(160deg,#fff8fb,#ffe3ef 55%,#fff5fa);overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:760px;margin:auto;padding:22px 17px 55px;position:relative}
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+.crown{font-size:55px;filter:drop-shadow(0 5px 8px #e9a5c3);animation:float 3s ease-in-out infinite}
+.kicker{font:700 11px/1.4 Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#bd648d;margin:18px 0 8px}
+h1{font-size:clamp(42px,10vw,76px);line-height:.98;margin:8px 0;color:#c94f87;font-weight:normal}
+.script{font-style:italic;color:#a9577b;font-size:clamp(18px,4vw,23px)}
+.btn{border:0;border-radius:999px;padding:14px 23px;background:linear-gradient(135deg,#ff8fbb,#e85f9a);color:white;box-shadow:0 8px 20px #e98db84f;font:700 14px Arial,sans-serif;margin:12px 5px;transition:.2s}
+.btn:active{transform:scale(.97)}
+.btn.secondary{background:#fff;color:#c94f87;border:1px solid #f4b8d1;box-shadow:none}
+.card{background:#ffffffc9;border:1px solid #f8c9dc;border-radius:26px;padding:24px 21px;margin:20px 0;box-shadow:0 12px 35px #d87da51c;backdrop-filter:blur(8px)}
+h2{font-size:29px;font-weight:normal;text-align:center;color:#c94f87;margin:0 0 12px}
+.center{text-align:center}
+p{line-height:1.75;font-size:16px}
+.small{font:12px Arial,sans-serif;color:#a66b86}
+.divider{text-align:center;color:#e58ab2;letter-spacing:8px;margin:15px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.photo{aspect-ratio:3/4;border-radius:17px;background:linear-gradient(145deg,#ffe0ed,#fff7fb);border:1px dashed #e9a0bf;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}
+.photo span{font:12px Arial,sans-serif;color:#b76d8c;text-align:center;padding:8px}
+.photo input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.letter{display:none;animation:appear .7s ease}
+.letter.show{display:block}
+.seal{width:62px;height:62px;border-radius:50%;background:#ffe0ed;display:grid;place-items:center;font-size:28px;margin:8px auto 18px}
+.final{font-size:22px;font-style:italic;color:#c94f87;text-align:center}
+.footer{text-align:center;padding:20px 0;color:#a66b86;font-size:13px}
+.sparkle{position:fixed;z-index:-1;pointer-events:none;animation:drift linear infinite;opacity:.65}
+@keyframes float{50%{transform:translateY(-12px) rotate(5deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes drift{from{transform:translateY(105vh) rotate(0deg)}to{transform:translateY(-10vh) rotate(300deg)}}
+@media(max-width:430px){.card{padding:21px 16px}.gallery{gap:6px}.photo{border-radius:12px}.btn{padding:13px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="crown">👑</div>
+    <div class="kicker">A little fairytale, made just for you</div>
+    <h1>Hey, Princess<br><span style="font-size:.72em">Dikshuaaa</span> ♡</h1>
+    <div class="script">Today, the whole little kingdom celebrates you.</div>
+    <div style="margin-top:22px">🌷 ✨ 🦋 ✨ 🌷</div>
+    <button class="btn" onclick="document.getElementById('surprise').scrollIntoView({behavior:'smooth'})">Enter your royal world ✨</button>
+    <div class="small">Psst… there are surprises waiting below</div>
+  </header>
+
+  <section class="card center" id="surprise">
+    <div style="font-size:30px">🎀 💗 🎀</div>
+    <h2>Happy Princess Day!</h2>
+    <p>To the girl who deserves extra sparkle, endless laughter and all the good things life can bring — this tiny corner of the internet is all yours.</p>
+    <p class="script">No royal crown needed. Your kind of magic is already yours.</p>
+  </section>
+
+  <section class="card">
+    <h2>Our little memory lane 📸</h2>
+    <p class="center small">Add your favourite photos together. Tap each frame to choose a picture from your phone.</p>
+    <div class="gallery">
+      <label class="photo"><img alt="Friendship memory 1"><span>♡<br>Add memory 1</span><input type="file" accept="image/*" aria-label="Choose first photo" onchange="loadPhoto(this)"></label>
+      <label class="photo"><img alt="Friendship memory 2"><span>♡<br>Add memory 2</span><input type="file" accept="image/*" aria-label="Choose second photo" onchange="loadPhoto(this)"></label>
+      <label class="photo"><img alt="Friendship memory 3"><span>♡<br>Add memory 3</span><input type="file" accept="image/*" aria-label="Choose third photo" onchange="loadPhoto(this)"></label>
+    </div>
+    <div class="divider">✧ ♡ ✧</div>
+    <p class="center small">Tip: choose photos that make you both smile.</p>
+  </section>
+
+  <section class="card center">
+    <div style="font-size:32px">💌</div>
+    <h2>A little letter for you</h2>
+    <p>Some people make ordinary days feel like stories worth remembering. You're one of those people.</p>
+    <button class="btn" id="openLetter" onclick="toggleLetter()">Open your secret letter 💗</button>
+    <div class="letter" id="letter">
+      <div class="seal">💖</div>
+      <p>Dear Dikshuaaa,</p>
+      <p>Life is so much more fun with your madness, your laughter and all our random little moments. Thank you for being my partner in masti, my favourite person to share silly things with, and a friend who makes memories feel special.</p>
+      <p>Keep being your wonderfully chaotic, kind and unforgettable self. I hope your days are filled with happiness, confidence, surprises and reasons to laugh until your cheeks hurt.</p>
+      <p class="final">You deserve the whole fairytale, Princess. ♡</p>
+      <p style="text-align:right">With lots of friendship & love,<br>Your bestie ✨</p>
+    </div>
+  </section>
+
+  <section class="card center">
+    <div style="font-size:34px">🦋</div>
+    <h2>Royal decree</h2>
+    <p>Official rules for today:</p>
+    <p>✨ You must smile at least a little.<br>🍰 You deserve a treat.<br>👑 You are allowed to feel like the main character.<br>💗 And you must never forget how appreciated you are.</p>
+    <div class="divider">♡ ♡ ♡</div>
+    <p class="final">End of decree. Signed, the royal bestie committee.</p>
+  </section>
+
+  <section class="center">
+    <button class="btn" onclick="sharePage()">Share this surprise ↗</button>
+    <button class="btn secondary" onclick="toggleMusic()" id="musicBtn">Play a tiny tune ♪</button>
+    <p class="small">The tune is an original gentle chime pattern. You can keep it muted, too.</p>
+  </section>
+  <footer class="footer">Made with ♡, just for Dikshuaaa<br><span class="small">Happy Princess Day 👑</span></footer>
+</div>
+<audio id="music" loop></audio>
+<script>
+function loadPhoto(input){
+ const file=input.files&&input.files[0]; if(!file)return;
+ const frame=input.parentElement, img=frame.querySelector('img'), label=frame.querySelector('span');
+ const reader=new FileReader();
+ reader.onload=e=>{img.src=e.target.result;img.style.display='block';label.style.display='none'};
+ reader.readAsDataURL(file);
+}
+function toggleLetter(){
+ const letter=document.getElementById('letter');
+ letter.classList.toggle('show');
+ document.getElementById('openLetter').textContent=letter.classList.contains('show')?'Close your letter ♡':'Open your secret letter 💗';
+}
+async function sharePage(){
+ const data={title:'A Princess Day surprise for Dikshuaaa',text:'A tiny pink fairytale made just for you, Dikshuaaa. Happy Princess Day! 👑💗',url:location.href};
+ try{
+  if(navigator.share) await navigator.share(data);
+  else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);alert('Link copied! Share it on WhatsApp 💗');}
+  else alert('Copy this page link from your browser and send it on WhatsApp.');
+ }catch(e){}
+}
+let audioCtx=null,oscillators=[],musicOn=false;
+function toggleMusic(){
+ const btn=document.getElementById('musicBtn');
+ if(musicOn){oscillators.forEach(o=>{try{o.stop()}catch(e){}});oscillators=[];musicOn=false;btn.textContent='Play a tiny tune ♪';return;}
+ try{
+  audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+  const notes=[523.25,659.25,783.99,659.25,587.33,698.46,783.99,1046.5];
+  notes.forEach((freq,i)=>{const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(.0001,audioCtx.currentTime+i*.34);gain.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+i*.34+.04);gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+i*.34+.28);osc.connect(gain);gain.connect(audioCtx.destination);osc.start(audioCtx.currentTime+i*.34);osc.stop(audioCtx.currentTime+i*.34+.3);oscillators.push(osc);});
+  musicOn=true;btn.textContent='Tune played — play again ♪';musicOn=false;
+ }catch(e){btn.textContent='Audio unavailable on this browser';}
+}
+for(let i=0;i<17;i++){const s=document.createElement('div');s.className='sparkle';s.textContent=['♡','✦','✧','🌸'][i%4];s.style.left=(Math.random()*100)+'%';s.style.animationDuration=(9+Math.random()*13)+'s';s.style.animationDelay=(-Math.random()*18)+'s';s.style.fontSize=(12+Math.random()*18)+'px';document.body.appendChild(s);}
+</script>
+</body>
+</html>
